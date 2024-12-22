@@ -26,7 +26,13 @@ for num in lst:
         sum_elements_mult_3 += num
 print("Sum of elements items multiply of 3 list: ", sum_elements_mult_3)
 
+mult_range = 1
 min_value_list = min(lst)
 max_value_list = max(lst)
 index_min = lst.index(min_value_list)
 index_max = lst.index(max_value_list)
+if index_max < index_min:
+    index_max,index_min = index_min,index_max
+for i in range(index_min,index_max,1):
+    mult_range *= lst[i]
+print("The product of the elements between the minimum and maximum elements:", mult_range)
